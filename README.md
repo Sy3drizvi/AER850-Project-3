@@ -1,2 +1,5 @@
-# AER850-Project-3
-This project creates an end-to-end system that utilizes deep learning to automatically identify parts on a printed circuit board (PCB).
+This project creates an end-to-end system that utilizes deep learning to automatically identify parts on a printed circuit board (PCB). The project workflow starts with a mask that removes everything but the actual circuit board from the picture of the motherboard. To do this, grayscale conversion, Gaussian blurring, thresholding, and contour extraction are performed so only the PCB is left visible, and anything else is removed.
+
+After the mask is applied, a YOLOv11-nano model is developed to identify and classify various components on the PCB, such as Capacitors (C), Connectors (C), Integrated Circuits (IC), Pins (P), and Resistors (R). Two models (Model A and Model B) are trained using two different methods: Model A was trained locally in Spyder while Model B was trained using GPU-accelerated Kaggle. Each model's performance is evaluated using mean Average Precision at 50% (mAP50), Precision, Recall, and F1 Scores.
+
+In conclusion, both models are utilized to perform detection on evaluation images; bounding boxes and labels are created for each of the detected PCB components. In summary, this project illustrates the implementation of basic image processing techniques combined with modern object detection frameworks will give rise to the ability to automate the inspection of a circuit board.
