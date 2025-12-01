@@ -1,0 +1,6 @@
+AER850 – Project 3 Output Structure
+===================================
+
+masking/              → PCB masking steps and overview figure
+training_outputs/     → YOLO training run (results.png, curves, confusion matrix, metrics_summary.txt)
+evaluation_outputs/   → Annotated predictions on evaluation images
